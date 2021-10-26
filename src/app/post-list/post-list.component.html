@@ -1,0 +1,9 @@
+<h2>post-list works!</h2>
+<button (click)="getPostList()">Get List of Posts</button><br/>
+<ng-container *ngIf="posts">
+    <ng-container *ngFor="let onepost of posts.data.children">
+        <div style="font-weight: bold;">Title: {{onepost.data.title}}</div>
+        Thumbnail: <img style="border-radius: 8px; transform: scaleX(-1);" src="{{onepost.data.thumbnail}}"/><br/>
+        PermaLink: {{onepost.data.permalink}}<br/><br/><br/>
+    </ng-container>
+</ng-container>

@@ -1,0 +1,6 @@
+<button (click)="getPost()">Get Single Post</button><br/>
+<ng-container *ngIf="post">
+    {{post.data.children[0].data.title}}<br/>
+    <img src="{{post.data.children[0].data.thumbnail}}"/><br/>
+    {{post.data.children[0].data.permalink}}
+</ng-container>
